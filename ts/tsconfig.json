@@ -1,0 +1,34 @@
+{
+	// 本文件是ts编译器的配置文件，ts编译器可以根据它的信息来对代码进行编译
+	"include": [
+		// 用来指定哪些ts文件需要被编译
+		// ** 表示任意目录
+		// * 表示任意文件
+		"./src/**/*"
+	],
+	"compilerOptions": {
+		// 编译选项是配置文件中非常重要和复杂的配置选项
+		"target": "ES5", // 指定TS被编译为的JS版本
+		// "module": "ES6", // 指定要使用的模块化的规范
+		// "lib": [] // 用来指定项目中要使用的库
+		"outDir": "./dist", // 用来指定编译后文件所在的目录
+		"outFile": "./dist/app.js", // 输出的文件，将所有的文件合并成一个文件
+		"allowJs": false, // 是否对js文件进行编译，默认false
+		"checkJs": false, // 是否对js文件进行检测语法，默认false
+		"removeComments": false, // 是否移除注释，默认false
+		"noEmit": false, // 是否生成编译后的文件，默认false
+		"noEmitOnError": true, // 当有错误时是否生成编译文件，默认false
+		"strict": false, // 所有严格检查的总开关，默认false
+		"alwaysStrict": false, // 编译后的文件是否开启严格模式，默认false
+		"noImplicitAny": false, // 是否不允许隐式的any类型，默认false
+		"noImplicitThis": false, // 是否不允许明确类型的this，默认false
+		"strictNullChecks": false // 是否严格的检查空值，默认false
+	}
+	// "exclude": [
+	// 	// 用来指定哪些ts文件不需要被编译
+	// 	// 默认值：["node_modules", "bower_components", "jspm_packages"]
+	// 	"./src/hhh/**/*"
+	// ]
+	// "extends": "", // 定义被继承的配置文件
+	// "files": [], // 指定被编译的文件列表，与include类似，但是include是指定文件夹，files是指定确定的文件
+}
